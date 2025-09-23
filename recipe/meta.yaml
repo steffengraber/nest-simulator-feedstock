@@ -1,6 +1,6 @@
 {% set name = "nest-simulator" %}
-{% set version = "3.8" %}
-{% set build = 5 %}
+{% set version = "3.9_rc2" %}
+{% set build = 0 %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/nest/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: eb255f8828be001abea0cddad2f14d78b70857fc82bece724551f27c698318c8
+  sha256: ba50d2f929ab0eed57a4691574e8fb83c50439277848102fa6e26f6280cd0ea5
 
 build:
   number: {{ build }}
@@ -33,7 +33,11 @@ requirements:
     - gsl >=1.11
     - hdf5
     - h5py
-    - libboost-headers
+    - libboost 
+    - libboost-devel 
+    - libboost-headers 
+    - libboost-python 
+    - libboost-python-devel
     - libcblas
     - liblapack
     - libtool
@@ -49,6 +53,11 @@ requirements:
     - gsl
     - hdf5
     - h5py
+    - libboost 
+    - libboost-devel 
+    - libboost-headers 
+    - libboost-python 
+    - libboost-python-devel
     - llvm-openmp  # [osx]
     - libgomp  # [linux]
     - libtool

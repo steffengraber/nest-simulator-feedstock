@@ -26,7 +26,7 @@ mkdir ../build
 pushd ../build || exit
 cmake -DCMAKE_INSTALL_PREFIX:PATH="${PREFIX}" \
       -Dwith-optimize="-O2" \
-      -Dwith-boost=ON \
+      -Dwith-boost="${PREFIX}" \
       -DCMAKE_OSX_SYSROOT="${CONDA_BUILD_SYSROOT}" \
       -Dwith-openmp=ON \
       -Dwith-python=ON \
